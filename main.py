@@ -1,6 +1,7 @@
 import tkinter
 from tkinter import messagebox
 
+# Initialize the main application window
 root = tkinter.Tk()
 root.title("Tkinter Window")
 
@@ -19,16 +20,18 @@ def loginNow():
 
 frame = tkinter.Frame(root, bg="#333333")
 
+# Title label
 login = tkinter.Label(frame, text="Login Form", font=("Arial",30), pady= 20, bg="#333333",  fg="#FFFFFF")
 login.grid(row=0, column=1, columnspan=2)
 
+# Username label and entry
 username_field = tkinter.Label(frame, text="Enter your Name: ", font=("Arial",15),bg="#333333", pady=40 , fg="#FFFFFF")
 username_field.grid()
 
 user_field = tkinter.Entry(frame, font=("Arial",14))
 user_field.grid(row=1,column=2)
 
-
+# Password label and entry
 password_field = tkinter.Label(frame, text="Password: ",pady=40, font=("Arial",15),bg="#333333", fg="#FFFFFF")
 password_field.grid()
 
@@ -40,4 +43,6 @@ submit_btn.grid(row=3, column=1, columnspan=2)
 
 
 frame.pack()
+
+# Start the Tkinter event loop
 root.mainloop()
